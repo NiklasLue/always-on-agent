@@ -1,0 +1,203 @@
+[
+  {
+    "ran_at": "2026-05-25T00:00:00Z",
+    "source": "claude",
+    "verdicts": [
+      {
+        "contract": "acme-data-platform",
+        "rule": "data-residency",
+        "rule_label": "Data residency",
+        "status": "violation",
+        "evidence_quote": "Vendor may process customer data in any region where Vendor maintains infrastructure, including the United States, Ireland, and Singapore.",
+        "evidence_block": "2. Data Processing",
+        "note": "Permits US and Singapore processing of EU data with only reasonable-efforts language, not a guarantee of EU residency."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "audit-rights",
+        "rule_label": "Audit rights",
+        "status": "unclear",
+        "evidence_quote": "The customer may audit Vendor's information security controls once per calendar year, on not less than 60 days' written notice.",
+        "evidence_block": "3. Audit Rights",
+        "note": "Sixty days' notice falls between the 30-day pass threshold and the 90-day violation threshold."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "termination",
+        "rule_label": "Termination",
+        "status": "pass",
+        "evidence_quote": "Termination for convenience is permitted by either party on 90 days' written notice.",
+        "evidence_block": "4. Term and Termination",
+        "note": "Termination for convenience requires exactly 90 days' notice, within the 90-day maximum."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "liability-cap",
+        "rule_label": "Liability cap",
+        "status": "pass",
+        "evidence_quote": "Vendor's aggregate liability under this Agreement is capped at fees paid by the customer in the 12 months preceding the event giving rise to the claim.",
+        "evidence_block": "5. Limitation of Liability",
+        "note": "Cap is 12 months of fees; data breach is covered by the cap, and gross negligence data breaches carry unlimited liability."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "subprocessors",
+        "rule_label": "Subprocessors",
+        "status": "violation",
+        "evidence_quote": "Vendor maintains a list of subprocessors at vendor.example/subprocessors. Vendor will update the list within 30 days of any change.",
+        "evidence_block": "6. Subprocessors",
+        "note": "Post-hoc list update within 30 days does not satisfy the requirement for at least 30 days' advance written notice before adding a subprocessor."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "breach-notification",
+        "rule_label": "Data breach notification",
+        "status": "violation",
+        "evidence_quote": "Vendor will notify the customer within 96 hours of confirming a security incident affecting the customer's data.",
+        "evidence_block": "7. Security Incidents",
+        "note": "96-hour notification window exceeds the required 72-hour maximum."
+      },
+      {
+        "contract": "acme-data-platform",
+        "rule": "governing-law",
+        "rule_label": "Governing law",
+        "status": "unclear",
+        "evidence_quote": "This Agreement is governed by the laws of the State of California, United States.",
+        "evidence_block": "8. Governing Law",
+        "note": "California has CCPA/CPRA data protection legislation but is not among the explicitly listed passing jurisdictions; treating as unclear pending legal review."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "data-residency",
+        "rule_label": "Data residency",
+        "status": "pass",
+        "evidence_quote": "All customer data will be processed exclusively within the European Economic Area (EEA). Globex will not transfer customer data outside the EEA without the customer's prior written consent.",
+        "evidence_block": "2. Data Processing",
+        "note": "Explicitly restricts all processing to the EEA with transfers outside only on prior written consent."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "audit-rights",
+        "rule_label": "Audit rights",
+        "status": "pass",
+        "evidence_quote": "The customer may request an audit of Globex's security controls on 30 days' written notice, not more than twice per calendar year.",
+        "evidence_block": "3. Audit Rights",
+        "note": "Thirty days' notice meets the policy's 30-day pass threshold exactly."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "termination",
+        "rule_label": "Termination",
+        "status": "pass",
+        "evidence_quote": "The customer may terminate for convenience on 60 days' written notice.",
+        "evidence_block": "4. Term",
+        "note": "Sixty days' notice for convenience termination is within the 90-day maximum."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "liability-cap",
+        "rule_label": "Liability cap",
+        "status": "pass",
+        "evidence_quote": "Globex's aggregate liability is capped at the fees paid in the 12 months preceding the claim. The cap does not apply to liability for data breach, gross negligence, or wilful misconduct.",
+        "evidence_block": "5. Limitation of Liability",
+        "note": "Cap is 12 months of fees and data breach liability is explicitly uncapped, exceeding the policy requirement."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "subprocessors",
+        "rule_label": "Subprocessors",
+        "status": "pass",
+        "evidence_quote": "Globex will provide the customer with at least 30 days' written notice before engaging any new subprocessor.",
+        "evidence_block": "6. Subprocessors",
+        "note": "At least 30 days' advance written notice before adding a new subprocessor meets the policy minimum."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "breach-notification",
+        "rule_label": "Data breach notification",
+        "status": "pass",
+        "evidence_quote": "Globex will notify the customer within 24 hours of detecting a confirmed security incident affecting the customer's data.",
+        "evidence_block": "7. Security Incidents",
+        "note": "24-hour notification window is well within the 72-hour maximum."
+      },
+      {
+        "contract": "globex-messaging",
+        "rule": "governing-law",
+        "rule_label": "Governing law",
+        "status": "pass",
+        "evidence_quote": "This Agreement is governed by the laws of England and Wales.",
+        "evidence_block": "8. Governing Law",
+        "note": "England and Wales is an explicitly named passing jurisdiction with a mature data protection regime."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "data-residency",
+        "rule_label": "Data residency",
+        "status": "violation",
+        "evidence_quote": "Customer data is stored in Sirius's data centres in Malaysia and Singapore. Sirius may relocate data between its facilities at its sole discretion for operational reasons.",
+        "evidence_block": "2. Data Processing",
+        "note": "All data is stored in APAC (Malaysia and Singapore) with no EU residency provision whatsoever."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "audit-rights",
+        "rule_label": "Audit rights",
+        "status": "violation",
+        "evidence_quote": "The customer may, on not less than 180 days' notice and not more than once every two years, conduct an audit of Sirius's security controls.",
+        "evidence_block": "3. Audit Rights",
+        "note": "180 days' notice far exceeds the 90-day violation threshold."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "termination",
+        "rule_label": "Termination",
+        "status": "violation",
+        "evidence_quote": "Termination for convenience is not permitted during the initial term.",
+        "evidence_block": "4. Termination",
+        "note": "Termination for convenience is explicitly prohibited during the initial term."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "liability-cap",
+        "rule_label": "Liability cap",
+        "status": "violation",
+        "evidence_quote": "Sirius's aggregate liability under this Agreement is capped at three (3) months of fees paid. This cap applies to all claims, including those arising from data breach or loss.",
+        "evidence_block": "5. Limitation of Liability",
+        "note": "Three-month liability cap is well below the required 12-month minimum."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "subprocessors",
+        "rule_label": "Subprocessors",
+        "status": "violation",
+        "evidence_quote": "Sirius may engage any subprocessor it deems appropriate without prior notice to or consent from the customer.",
+        "evidence_block": "6. Subprocessors",
+        "note": "Vendor explicitly reserves the right to add subprocessors without any prior notice."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "breach-notification",
+        "rule_label": "Data breach notification",
+        "status": "violation",
+        "evidence_quote": "Sirius will notify the customer of confirmed security incidents in due course, taking into account the nature and circumstances of the incident.",
+        "evidence_block": "7. Security Incidents",
+        "note": "'In due course' is not a specific notification window and does not satisfy the 72-hour maximum requirement."
+      },
+      {
+        "contract": "sirius-storage",
+        "rule": "governing-law",
+        "rule_label": "Governing law",
+        "status": "violation",
+        "evidence_quote": "This Agreement is governed by the laws of Malaysia.",
+        "evidence_block": "8. Governing Law",
+        "note": "Malaysia is an explicitly named weak-enforcement jurisdiction under the policy."
+      }
+    ],
+    "summary": {
+      "pass": 9,
+      "violation": 10,
+      "unclear": 2,
+      "total": 21
+    }
+  }
+]
